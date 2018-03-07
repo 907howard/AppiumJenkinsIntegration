@@ -17,10 +17,16 @@ public class SetAlarmTest {
 	
 	public void alarmtest() throws MalformedURLException, InterruptedException
 	{
-		
+		//dial number class deleted check
+	
+	
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability("automation name", "Appium");
-		dc.setCapability("platform", "Android");
+		//dc.setCapability("platform", "Android");
+		
+		dc.setCapability("platform", System.getProperty("PlatformName"));
+		dc.setCapability("platform", System.getProperty("PlatformVersion"));
+		
 		dc.setCapability("deviceName", "t1");//emulator name or keep as android emulator
 		dc.setCapability("platformVesion", "5.0.1");
 		
